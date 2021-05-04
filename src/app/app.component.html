@@ -1,5 +1,8 @@
 <div class="container my-4">
     <app-search (searchClicked)="searchCity($event)"></app-search>
+    <div class="map" *ngIf="!error && weather">
+        <app-map [weather]="weather"></app-map>
+    </div>
     <app-weather-table [weather]="weather" *ngIf="!error"></app-weather-table>
     <div class="alert alert-danger my-4" role="alert" *ngIf="error">
         {{ error }}
