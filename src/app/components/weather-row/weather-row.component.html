@@ -1,0 +1,10 @@
+<th scope="row">{{ getFormatedDay(index) }}</th>
+<td class="column">
+    {{ row.weather.description }}
+    <img [src]="row.weather.icon" />
+</td>
+<td>{{ row.temp.day }}°C</td>
+<td>{{ row.temp.min }}°C / {{ row.temp.max }}°C</td>
+<td>{{ row.pressure }}hPa</td>
+<td>{{ row.humidity }}%</td>
+<td>{{ row.speed }}m/s</td>

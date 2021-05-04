@@ -1,0 +1,22 @@
+<table class="table table-striped my-4" *ngIf="weather">
+    <thead>
+        <tr>
+            <th scope="col">Jour</th>
+            <th scope="col">Météo</th>
+            <th scope="col">Temp. moyenne (°C)</th>
+            <th scope="col">Temp. min/max (°C)</th>
+            <th scope="col">Pression (hPa)</th>
+            <th scope="col">Humidié (%)</th>
+            <th scope="col">Vitesse du vent (m/s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            app-weather-row
+            *ngFor="let wr of weather.list; let i = index"
+            [index]="i"
+            [row]="wr"
+            (click)="openWeatherInOtherTab()"
+        ></tr>
+    </tbody>
+</table>

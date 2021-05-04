@@ -1,0 +1,13 @@
+<form>
+    <div class="form-group">
+        <label for="citySearched">Dans quelle ville ?</label>
+        <input
+            type="citySearched"
+            class="form-control"
+            id="citySearched"
+            name="citySearched"
+            [(ngModel)]="citySearched"
+        />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="search()">Rechercher</button>
+</form>
